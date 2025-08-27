@@ -24,6 +24,12 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 const Home = () => {
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or "auto" if you don't want animation
+    });
+  }, []);
+  useEffect(() => {
     Aos.init({
       duration: 1000, // animation duration in ms
       once: true, // whether animation should happen only once
@@ -176,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* Facilities Section */}
-      <section className="py-16 px-20 bg-gray-50 pt-20">
+      <section className="py-16 px-2 pt-20">
         <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
           Our Facilities
         </h2>
@@ -207,7 +213,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-20 pt-20">
+      <section className="py-16 px-20 pt-20 bg-gray-100">
         <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
           Why Choose Dreamland?
         </h2>
@@ -241,6 +247,87 @@ const Home = () => {
             <p className="text-gray-600 mt-2">
               Regular updates, events & open communication with parents.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20">
+        <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
+          Upcoming Events
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Event 1 */}
+          <div
+            className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Sports Day"
+              className="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 className="text-xl font-bold text-purple-700">
+              Annual Sports Day
+            </h3>
+            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+              A fun-filled day with exciting games and activities for children
+              and parents.
+            </p>
+            <span className="mt-3 text-sm font-semibold text-yellow-600">
+              📅 15th September 2025
+            </span>
+          </div>
+
+          {/* Event 2 */}
+          <div
+            className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Festival Celebration"
+              className="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 className="text-xl font-bold text-purple-700">
+              Diwali Celebration
+            </h3>
+            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+              Bright lights, cultural performances, and festive activities to
+              celebrate together.
+            </p>
+            <span className="mt-3 text-sm font-semibold text-yellow-600">
+              📅 5th November 2025
+            </span>
+          </div>
+
+          {/* Event 3 */}
+          <div
+            className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            <img
+              src="https://placehold.co/400x250"
+              alt="Christmas Party"
+              className="w-full h-48 object-cover rounded-xl mb-4"
+            />
+            <h3 className="text-xl font-bold text-purple-700">
+              Children's Day
+            </h3>
+            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+              A special day to celebrate our little stars with fun games,
+              performances, and gifts 🎉
+            </p>
+            <span className="mt-3 text-sm font-semibold text-yellow-600">
+              📅 14th November 2025
+            </span>
           </div>
         </div>
       </section>
