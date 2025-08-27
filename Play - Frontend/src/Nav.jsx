@@ -14,24 +14,27 @@ const Nav = () => {
 
   return (
     <>
-      <header className="bg-gradient-to-r from-[#9b0576] to-[#d05db3] h-10 inline-flex w-full justify-start items-center px-20 text-white gap-20">
-        <div className="inline-flex gap-3">
-          <FaLocationDot className="mt-1" />
-          <h1 className="font-bold">
+      <header className="bg-gradient-to-r from-[#9b0576] to-[#d05db3] w-full flex flex-wrap justify-center md:justify-between items-center px-4 sm:px-6 md:px-10 lg:px-20 py-2 text-white gap-4 md:gap-10 text-center md:text-left">
+        {/* Address */}
+        <div className="flex items-center gap-2 text-sm sm:text-base">
+          <FaLocationDot className="flex-shrink-0" />
+          <span className="font-medium">
             96, Rajaji Salai, Egmore, Chennai, Tamilnadu 600 008
-          </h1>
+          </span>
         </div>
-        <div className="inline-flex gap-3">
-          <FaMobileAlt className="mt-1" />
-          <h1 className="font-bold">+91 81225 95789 / +91 81225 95799</h1>
+
+        {/* Phone */}
+        <div className="flex items-center gap-2 text-sm sm:text-base">
+          <FaMobileAlt className="flex-shrink-0" />
+          <span className="font-medium">+91 81225 95789 / +91 81225 95799</span>
         </div>
-        <div className="mx-[42px] inline-flex justify-center items-center">
-          <div className="inline-flex gap-3">
-            <FaLinkedin className="rounded-full text-white border-2 h-7 w-7 p-1 transition-transform hover:scale-120" />
-            <FaInstagram className="rounded-full text-white border-2 h-7 w-7 p-1 transition-transform hover:scale-120" />
-            <FaFacebook className="rounded-full text-white border-2 h-7 w-7 p-1 transition-transform hover:scale-120" />
-            <TiSocialYoutube className="rounded-full text-white border-2 h-7 w-7 p-1 transition-transform hover:scale-120" />
-          </div>
+
+        {/* Social Icons */}
+        <div className="flex justify-center md:justify-end gap-3">
+          <FaLinkedin className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-transform hover:scale-110" />
+          <FaInstagram className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-transform hover:scale-110" />
+          <FaFacebook className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-transform hover:scale-110" />
+          <TiSocialYoutube className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-transform hover:scale-110" />
         </div>
       </header>
       <header className="px-4 sm:px-6 lg:px-20 bg-gradient-to-r from-[#471da3] to-[#805dd0] text-white flex justify-between items-center sticky top-0 shadow-2xl z-50 h-20">
