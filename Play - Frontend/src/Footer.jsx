@@ -5,10 +5,11 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaLocationDot,
+  FaLocationDot
 } from "react-icons/fa6";
-import { FaMobileAlt } from "react-icons/fa";
+import { FaMailBulk, FaMobileAlt } from "react-icons/fa";
 import { TiSocialYoutube } from "react-icons/ti";
+import { CgMail, CgMailForward } from "react-icons/cg";
 
 const Footer = () => {
   return (
@@ -34,6 +35,12 @@ const Footer = () => {
             <FaMobileAlt className="size-7" />
             <h1 className="font-bold text-[18px]">
               +91 81225 95789 / +91 81225 95799
+            </h1>
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <CgMail className="size-9" />
+            <h1 className="font-bold text-[18px]">
+              dreamlandkids@gmail.com
             </h1>
           </div>
         </div>

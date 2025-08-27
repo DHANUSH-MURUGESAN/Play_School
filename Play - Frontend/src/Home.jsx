@@ -1,70 +1,102 @@
-import React from "react";
-import logo from "./assets/playschoollogo2.png";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
 import kid from "./assets/kid.png";
-import kid2 from "./assets/kid-2.jpg"
+import kid2 from "./assets/kid-2.jpg";
 import star from "./assets/star.png";
-import baloon from "./assets/baloon.png"
-import plane from "./assets/plane.png"
+import baloon from "./assets/baloon.png";
+import plane from "./assets/plane.png";
+import prog1 from "./assets/little-kid-playing.jpg";
+import prog2 from "./assets/young-woman-doing-speech-therapy-with-kids.jpg";
+import prog3 from "./assets/children-spending-time-together-comfort-their-home.jpg";
+import clayday from "./assets/nationalclayday.jpg";
+import independenceday from "./assets/independenceday.jpg";
+import childrensday from "./assets/childrensday.jpg";
+import animalday from "./assets/animalday.jpg";
+import healthyandhygineday from "./assets/healthandhygieneday.jpg";
+import internationalyogaday from "./assets/internationalyogaday.jpg";
 import { Link } from "react-router";
+import Aos from "aos";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+    });
+  }, []);
   return (
     <>
-      <section className="bg-gradient-to-r from-purple-700 to-pink-500 text-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-        <div className="max-w-xl space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+      <section className="bg-gradient-to-r from-purple-700 to-pink-500 text-white py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center justify-between pt-24">
+        <div
+          className="max-w-xl space-y-6 text-center md:text-left"
+          data-aos="fade-up"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Welcome to
             <span className="text-yellow-300"> Dreamland Kids Play World</span>
           </h1>
-          <p className="text-lg mb-10">
+          <p className="text-base sm:text-lg mb-6 sm:mb-10">
             A world of fun, creativity, and learning for your little ones. Where
             every child shines bright like a star ✨
           </p>
-          <Link to="./admissions" className="bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-yellow-300 transition-transform hover:scale-105">
+          <Link
+            to="./admissions"
+            className="bg-yellow-400 text-purple-900 font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-md hover:bg-yellow-300 transition-transform hover:scale-105"
+          >
             Enroll Now
           </Link>
         </div>
 
-        <div className="mt-10 md:mt-0 relative flex justify-center">
+        <div className="mt-10 md:mt-0 relative flex justify-center items-center">
           {/* Decorative star */}
           <img
             src={star}
             alt="Star"
-            className="w-10 h-10 absolute top-9 -left-6 animate-pulse"
+            className="w-10 h-10 absolute top-5 left-0 animate-pulse"
           />
           <img
             src={star}
             alt="Star"
-            className="w-5 h-5 absolute top-7 left-9 animate-pulse"
+            className="w-5 h-5 absolute top-9 left-13 animate-pulse"
           />
           <img
             src={star}
             alt="Star"
-            className="w-7 h-7 absolute top-20 left-5 animate-pulse"
+            className="w-7 h-7 absolute top-16 left-5 animate-pulse"
           />
           <img
             src={plane}
-            alt="Star"
-            className="w-15 h-10 absolute top-50 right-4 rotate-200 " 
+            alt="Plane"
+            className="w-14 h-10 absolute top-52 right-4 rotate-[200deg]"
           />
-          {/* Decorative baloon */}
+          {/* Decorative balloon */}
           <img
             src={baloon}
             alt="Baloon"
-            className="w-auto h-60 absolute -top-17 left-81 z-20"
+            className="w-auto h-45 absolute -top-5 left-80"
           />
           {/* Main image */}
           <img
             src={kid}
             alt="Happy Kids"
-            className="h-[360px] md:h-[420px] drop-shadow-2xl"
+            className="h-[320px] md:h-[380px] drop-shadow-2xl relative z-20"
           />
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-20 flex flex-col md:flex-row items-center gap-10">
-        <img src={kid2} alt="About" className="h-72 rounded-2xl shadow-md" />
+      <section className="py-16 px-20 flex flex-col md:flex-row items-center gap-10 pt-20">
+        <img
+          src={kid2}
+          alt="About"
+          className="h-72 rounded-2xl shadow-md"
+          data-aos="fade-right"
+        />
         <div className="max-w-lg space-y-8">
           <h2 className="text-3xl font-bold text-purple-800">About Us</h2>
           <p className="text-gray-700">
@@ -73,27 +105,48 @@ const Home = () => {
             environment where children can learn through play, explore their
             curiosity, and build a strong foundation for the future.
           </p>
-          <Link to="./aboutus" className="text-yellow-400 bg-purple-800 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-purple-500 transition-transform hover:scale-105">
+          <Link
+            to="./aboutus"
+            className="text-yellow-400 bg-purple-800 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-purple-500 transition-transform hover:scale-105"
+          >
             Learn More
           </Link>
         </div>
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 px-20 bg-gray-50">
+      <section className="py-16 px-20 bg-gray-100 pt-20">
         <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
           Our Programs
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition">
-            <img src={logo} alt="Play" className="h-28 mx-auto mb-4" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div
+            className="bg-white rounded-3xl shadow-md p-6 text-center hover:shadow-xl transition-transform hover:scale-105"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img
+              src={prog1}
+              alt="Play"
+              className="h-45 w-65 mx-auto mb-4 rounded-3xl"
+            />
             <h3 className="font-bold text-xl text-purple-700">Fun & Play</h3>
             <p className="text-gray-600 mt-2">
               Engaging activities to boost creativity and motor skills.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition">
-            <img src={logo} alt="Learn" className="h-28 mx-auto mb-4" />
+          <div
+            className="bg-white rounded-3xl shadow-md p-6 text-center hover:shadow-xl transition-transform hover:scale-105"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img
+              src={prog2}
+              alt="Learn"
+              className="h-45 w-65 mx-auto mb-4 rounded-3xl"
+            />
             <h3 className="font-bold text-xl text-purple-700">
               Early Learning
             </h3>
@@ -101,8 +154,17 @@ const Home = () => {
               Interactive learning through stories, rhymes & games.
             </p>
           </div>
-          <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl transition">
-            <img src={logo} alt="Activities" className="h-28 mx-auto mb-4" />
+          <div
+            className="bg-white rounded-3xl shadow-md p-6 text-center hover:shadow-xl transition-transform hover:scale-105"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            <img
+              src={prog3}
+              alt="Activities"
+              className="h-45 w-65 mx-auto mb-4 rounded-3xl"
+            />
             <h3 className="font-bold text-xl text-purple-700">
               Creative Activities
             </h3>
@@ -113,33 +175,283 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Facilities Section */}
+      <section className="py-16 px-20 bg-gray-50 pt-20">
+        <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
+          Our Facilities
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
+          <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105">
+            <h3 className="font-bold text-xl text-purple-700">
+              Safe Environment
+            </h3>
+            <p className="text-gray-600 mt-2">
+              CCTV surveillance and secure campus for your child’s safety.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105">
+            <h3 className="font-bold text-xl text-purple-700">
+              Smart Classrooms
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Interactive boards and modern learning tools for young minds.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105">
+            <h3 className="font-bold text-xl text-purple-700">Play Area</h3>
+            <p className="text-gray-600 mt-2">
+              Spacious indoor & outdoor play zones to ensure fun & fitness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 px-20 pt-20">
+        <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
+          Why Choose Dreamland?
+        </h2>
+        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
+          <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl">
+            <h3 className="font-bold text-lg text-purple-700">
+              Experienced Teachers
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Friendly and qualified staff for every child’s growth.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl">
+            <h3 className="font-bold text-lg text-purple-700">
+              Creative Curriculum
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Play-based learning designed for curious young minds.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl">
+            <h3 className="font-bold text-lg text-purple-700">Healthy Meals</h3>
+            <p className="text-gray-600 mt-2">
+              Nutritious snacks & meals to keep kids active & happy.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl">
+            <h3 className="font-bold text-lg text-purple-700">
+              Parent Involvement
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Regular updates, events & open communication with parents.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-20 bg-gray-100 pt-20">
+        <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
+          What Parents Say
+        </h2>
+
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 }, // mobile
+            768: { slidesPerView: 2 }, // tablet
+            1024: { slidesPerView: 2 }, // desktop
+          }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop={true}
+          className="max-w-6xl mx-auto px-4"
+        >
+          <SwiperSlide>
+            <div className="bg-white rounded-2xl p-6 shadow-md">
+              <p className="text-gray-600 italic">
+                “Dreamland has been the best choice for my daughter. She loves
+                the teachers and activities here. Every day she comes home
+                excited to share what she learned, and I can see how much she’s
+                growing both academically and personally.”
+              </p>
+              <h4 className="mt-4 font-bold text-purple-700">
+                – Mrs. Harini, Parent
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white rounded-2xl p-6 shadow-md">
+              <p className="text-gray-600 italic">
+                “The environment is safe and nurturing. My son has grown more
+                confident and social since joining Dreamland. The caring staff
+                and fun-filled learning approach have helped him explore his
+                creativity and make wonderful friends.”
+              </p>
+              <h4 className="mt-4 font-bold text-purple-700">
+                – Mr. Arjun, Parent
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white rounded-2xl p-6 shadow-md">
+              <p className="text-gray-600 italic">
+                “Choosing Dreamland was one of the best decisions we made for
+                our child. The play-based learning, combined with the supportive
+                atmosphere, has helped her become curious, independent, and
+                happy.”
+              </p>
+              <h4 className="mt-4 font-bold text-purple-700">
+                – Mrs. Dhivya Manoj, Parent
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white rounded-2xl p-6 shadow-md">
+              <p className="text-gray-600 italic">
+                “Dreamland is not just a playschool, it’s like a second home for
+                my child. The teachers are extremely loving, patient, and
+                attentive. My little one has developed good habits, discipline,
+                and most importantly, a love for learning. I feel reassured
+                every day knowing she is in such safe and capable hands.”
+              </p>
+              <h4 className="mt-4 font-bold text-purple-700">
+                – Mr. Akash Kumar, Parent
+              </h4>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="bg-white rounded-2xl p-6 shadow-md">
+              <p className="text-gray-600 italic">
+                “Dreamland provides a joyful, safe, and positive environment. My
+                daughter has blossomed here—her imagination has grown, and she
+                has picked up strong values like sharing, kindness, and
+                teamwork. I couldn’t have asked for a better place for her early
+                years.”
+              </p>
+              <h4 className="mt-4 font-bold text-purple-700">
+                – Mrs. Varnika, Parent
+              </h4>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
+
       {/* Gallery Section */}
-      <section className="py-16 px-20">
+      <section className="py-16 px-20 pt-20">
         <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">
           Gallery
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <img
-            src="https://placehold.co/300x200"
-            alt="Gallery1"
-            className="rounded-xl shadow-md"
-          />
-          <img
-            src="https://placehold.co/300x200"
-            alt="Gallery2"
-            className="rounded-xl shadow-md"
-          />
-          <img
-            src="https://placehold.co/300x200"
-            alt="Gallery3"
-            className="rounded-xl shadow-md"
-          />
-          <img
-            src="https://placehold.co/300x200"
-            alt="Gallery4"
-            className="rounded-xl shadow-md"
-          />
-        </div>
+
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={15}
+          slidesPerView={3}
+          navigation
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          className="max-w-6xl mx-auto px-4"
+        >
+          {/* Slides */}
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={clayday}
+                alt="National Clay Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  National Clay Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={independenceday}
+                alt="National Clay Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  Independence Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={childrensday}
+                alt="Children's Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  Children's Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={animalday}
+                alt="Animal Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  Animal Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={healthyandhygineday}
+                alt="Health and Hygiene Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  Health and Hygiene Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-60">
+              {/* Image with opacity */}
+              <img
+                src={internationalyogaday}
+                alt="National Clay Day"
+                className="rounded-xl shadow-md w-full h-60 object-cover opacity-80"
+              />
+              {/* Overlay text */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded-xl">
+                <h3 className="text-white text-lg md:text-xl font-bold py-2">
+                  International Yoga Day
+                </h3>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );
