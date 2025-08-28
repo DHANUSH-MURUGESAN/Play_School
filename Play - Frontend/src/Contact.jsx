@@ -3,6 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or "auto" if you don't want animation
+    });
+  }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,7 +43,6 @@ const ContactForm = () => {
   return (
     <>
       <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-purple-400 via-pink-300 to-blue-300 relative overflow-hidden">
-        
         {/* Blurry circles for background */}
         <div className="absolute w-72 h-72 bg-pink-400 rounded-full blur-3xl opacity-30 top-10 left-10 animate-pulse"></div>
         <div className="absolute w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-30 bottom-10 right-10 animate-pulse"></div>
@@ -162,7 +167,7 @@ const ContactForm = () => {
               data-aos="zoom-in-up"
               className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white font-semibold cursor-pointer py-3 rounded-lg shadow-md hover:opacity-90 transition-transform transform hover:scale-105"
             >
-               Submit
+              Submit
             </button>
           </form>
         </div>
@@ -172,4 +177,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

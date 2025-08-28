@@ -61,31 +61,31 @@ const Nav = () => {
         <nav className="hidden md:flex items-center text-base lg:text-lg font-bold gap-6 lg:gap-12">
           <Link
             to="/"
-            className="relative hover:text-[#FFD600] after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-[#FFD600] after:left-1/2 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Home
           </Link>
           <Link
             to="/aboutus"
-            className="hover:text-[#FFD600] transition-transform duration-300 hover:scale-110"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             About Us
           </Link>
           <Link
             to="/admissions"
-            className="relative hover:text-[#FFD600] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#FFD600] after:transition-all after:duration-300 hover:after:w-full"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Admissions
           </Link>
           <Link
             to="/shop"
-            className="hover:text-[#FFD600] transition-transform duration-300 hover:rotate-2"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Shop
           </Link>
           <Link
             to="/blog"
-            className="hover:text-[#FFD600] transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Blog
           </Link>
@@ -93,7 +93,7 @@ const Nav = () => {
             to="/contact"
             className="hover:text-[#FFD600] transition duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
-            Contact-Us
+            Contact
           </Link>
         </nav>
 

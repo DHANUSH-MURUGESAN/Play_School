@@ -14,6 +14,9 @@ import childrensday from "./assets/childrensday.jpg";
 import animalday from "./assets/animalday.jpg";
 import healthyandhygineday from "./assets/healthandhygieneday.jpg";
 import internationalyogaday from "./assets/internationalyogaday.jpg";
+import annualsportsday from "./assets/annualsportsday.png"
+import diwali from "./assets/diwali.png"
+import childrenssday from "./assets/childrenssday.png"
 import { Link } from "react-router";
 import Aos from "aos";
 import "swiper/css";
@@ -266,7 +269,7 @@ const Home = () => {
             data-aos-duration="2000"
           >
             <img
-              src="https://placehold.co/400x250"
+              src={annualsportsday}
               alt="Sports Day"
               className="w-full h-48 object-cover rounded-xl mb-4"
             />
@@ -290,7 +293,7 @@ const Home = () => {
             data-aos-duration="2000"
           >
             <img
-              src="https://placehold.co/400x250"
+              src={diwali}
               alt="Festival Celebration"
               className="w-full h-48 object-cover rounded-xl mb-4"
             />
@@ -314,8 +317,8 @@ const Home = () => {
             data-aos-duration="2000"
           >
             <img
-              src="https://placehold.co/400x250"
-              alt="Christmas Party"
+              src={childrenssday}
+              alt="Children's Party"
               className="w-full h-48 object-cover rounded-xl mb-4"
             />
             <h3 className="text-xl font-bold text-purple-700">

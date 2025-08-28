@@ -2,12 +2,18 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Tabs from "./Tabs";
-import children from "./assets/children.jpg"
-import circle from "./assets/circle.png"
-import boy from "./assets/boy.jpg"
-import triangle from "./assets/triangle.png"
+import children from "./assets/children.jpg";
+import circle from "./assets/circle.png";
+import boy from "./assets/boy.jpg";
+import triangle from "./assets/triangle.png";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or "auto" if you don't want animation
+    });
+  }, []);
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -59,9 +65,11 @@ const About = () => {
 
             <p className="text-gray-700 leading-relaxed mb-4">
               Our Business Partners don’t just take the name, they also take our{" "}
-              <span className="font-bold text-purple-700">pedagogy– PÉNTEMiND</span>,
-              guidelines to teach, prescribes books/plays to be followed and so
-              on to the ground.
+              <span className="font-bold text-purple-700">
+                pedagogy– PÉNTEMiND
+              </span>
+              , guidelines to teach, prescribes books/plays to be followed and
+              so on to the ground.
             </p>
 
             <p className="text-gray-700 leading-relaxed mb-4">
