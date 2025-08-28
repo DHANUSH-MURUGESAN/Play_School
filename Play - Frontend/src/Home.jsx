@@ -112,7 +112,7 @@ const Home = () => {
             curiosity, and build a strong foundation for the future.
           </p>
           <Link
-            to="./aboutus"
+            to="/aboutus"
             className="text-yellow-400 bg-purple-800 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-purple-500 transition-transform hover:scale-105"
           >
             Learn More
