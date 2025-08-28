@@ -50,9 +50,28 @@ const Tabs = () => {
         {activeTab === "legacy" && (
           <div>
             <h2 className="text-2xl font-bold text-purple-800 mb-2">Legacy</h2>
-            <p className="text-gray-700">
-              Legacy content goes here. Add your history, background, and brand
-              journey details.
+            <p className="text-gray-700 leading-relaxed">
+              At Dreamland Kids Play World, our legacy is built on years of
+              dedication to nurturing young minds. What began as a small
+              initiative to provide a safe and joyful space for children has
+              grown into a trusted name in early childhood education. Over the
+              years, we have created a vibrant community of teachers, parents,
+              and children who share the same vision of holistic learning.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Our journey is defined by innovation, care, and commitment. From
+              introducing creative play-based methods to adopting modern
+              teaching practices, we have always stayed ahead while holding on
+              to our values of kindness, inclusivity, and trust. This balance
+              between tradition and progress continues to shape our brand
+              identity.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Today, our legacy is reflected in the countless success stories of
+              children who started their learning journey with us and went on to
+              thrive with confidence, creativity, and curiosity. We remain proud
+              of our roots while continuing to expand our impact for future
+              generations.
             </p>
           </div>
         )}
@@ -82,13 +101,44 @@ const Tabs = () => {
         {/* Vision & Mission */}
         {activeTab === "vision" && (
           <div>
-            <h2 className="text-2xl font-bold text-purple-800 mb-2">
-              Vision & Mission
-            </h2>
-            <p className="text-gray-700">
-              Vision & Mission content goes here. Add your organization’s goals
-              and values.
-            </p>
+            <div>
+              <h2 className="text-2xl font-bold text-purple-800 mb-2">
+                Vision
+              </h2>
+              <p className="text-gray-700">
+                To be a trusted and joyful place where children can explore,
+                imagine, and discover the world around them. We aim to nurture
+                lifelong learners who grow into confident, responsible, and
+                compassionate individuals.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h2 className="text-2xl font-bold text-purple-800 mb-2">
+                Mission
+              </h2>
+              <ul className="text-gray-700 list-disc list-inside space-y-2">
+                <li>
+                  To provide a safe, inclusive, and nurturing space for early
+                  childhood education.
+                </li>
+                <li>
+                  To encourage curiosity, creativity, and critical thinking
+                  through play-based learning.
+                </li>
+                <li>
+                  To foster emotional, social, and intellectual growth by
+                  blending fun with structured learning.
+                </li>
+                <li>
+                  To partner with parents in building a strong foundation for
+                  each child’s future.
+                </li>
+                <li>
+                  To instill values of kindness, respect, and teamwork in every
+                  activity we do.
+                </li>
+              </ul>
+            </div>
           </div>
         )}
 

@@ -33,8 +33,8 @@ const Nav = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-end gap-3">
-          <FaLinkedin className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#0A66C2] hover:border-[#0A66C2]" />
-          <FaInstagram className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#E1306C] hover:border-[#E1306C]" />
+          <Link to="https://www.linkedin.com/in/dhanush-murugesan-stm/"><FaLinkedin className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#0A66C2] hover:border-[#0A66C2]" /></Link>
+          <Link to="https://www.instagram.com/dhanushm_md/"><FaInstagram className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#E1306C] hover:border-[#E1306C]" /></Link>
           <FaFacebook className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#1877F2] hover:border-[#1877F2]" />
           <TiSocialYoutube className="rounded-full text-white border-2 h-6 w-6 sm:h-7 sm:w-7 p-1 transition-colors hover:text-[#FF0000] hover:border-[#FF0000]" />
         </div>

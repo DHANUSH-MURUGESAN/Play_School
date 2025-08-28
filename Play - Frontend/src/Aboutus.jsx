@@ -13,8 +13,6 @@ const About = () => {
       top: 0,
       behavior: "smooth", // or "auto" if you don't want animation
     });
-  }, []);
-  useEffect(() => {
     AOS.init({
       duration: 1200,
       once: true,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import logo from "./assets/playschoollogo2.png";
 import {
   FaClock,
@@ -45,8 +46,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-center justify-center gap-3 mt-8">
-          <FaLinkedin className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#2f69e6e7]" />
-          <FaInstagram className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#ff0090e2]" />
+          <Link to="https://www.linkedin.com/in/dhanush-murugesan-stm/"><FaLinkedin className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#2f69e6e7]" /></Link>
+          <Link to="https://www.instagram.com/dhanushm_md/"><FaInstagram className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#ff0090e2]" /></Link>
           <FaFacebook className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#004df2e7]" />
           <TiSocialYoutube className="rounded-full text-white border-2 h-10 w-auto p-1 transition-transform hover:scale-120 hover:text-[#d90202]" />
         </div>

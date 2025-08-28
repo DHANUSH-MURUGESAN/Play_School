@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
-import kid from "./assets/kid-2.jpg"
-import kidsplayhome from "./assets/kidsplayhome.jpg"
-import kidhealth from "./assets/kidhealthyfood.jpg"
-import kidstory from "./assets/kidstory.jpg"
-import parentencouragekid from "./assets/parentencouragekid.jpg"
-import playchild from "./assets/playchild.jpg"
-import musickid from "./assets/musickid.jpg"
-import parenttip from "./assets/parenttip.jpg"
-import outdoorplay from "./assets/outdoorplykid.jpg"
-import kidsconfidence from "./assets/kidsconfidence.jpg"
-import digitalsafe from "./assets/digitalsafe.jpg"
+import kid from "./assets/kid-2.jpg";
+import kidsplayhome from "./assets/kidsplayhome.jpg";
+import kidhealth from "./assets/kidhealthyfood.jpg";
+import kidstory from "./assets/kidstory.jpg";
+import parentencouragekid from "./assets/parentencouragekid.jpg";
+import playchild from "./assets/playchild.jpg";
+import musickid from "./assets/musickid.jpg";
+import parenttip from "./assets/parenttip.jpg";
+import outdoorplay from "./assets/outdoorplykid.jpg";
+import kidsconfidence from "./assets/kidsconfidence.jpg";
+import digitalsafe from "./assets/digitalsafe.jpg";
 import { useParams } from "react-router";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // or "auto" if you don't want animation
+    });
+  }, []);
   const blogData = [
     {
       id: 1,
@@ -22,8 +28,7 @@ const Blog = () => {
       image: kid,
       description:
         "Early education plays a crucial role in shaping a child’s future. Learn how play-based learning improves creativity and confidence.",
-      content:
-        `Early education plays a crucial role in shaping a child’s future. Learn how play-based learning improves creativity and confidence.
+      content: `Early education plays a crucial role in shaping a child’s future. Learn how play-based learning improves creativity and confidence.
 
 Childhood is often described as the foundation of life, and the experiences children have in their early years significantly influence the adults they will become. Early childhood education is not just about teaching letters, numbers, or colors—it is about laying the groundwork for lifelong learning, emotional well-being, and social development. During these formative years, children are naturally curious, energetic, and eager to explore the world around them. A structured yet nurturing environment allows this curiosity to blossom into meaningful skills that support their academic, personal, and social growth.
 
@@ -37,7 +42,7 @@ Equally important is the emotional and social growth that comes with early educa
 
 Parents also benefit from early childhood education programs. A strong partnership between educators and families allows parents to better understand their child’s strengths, challenges, and interests. Regular updates, parent-teacher meetings, and collaborative activities create a support system that extends beyond the classroom. This holistic approach ensures that children feel secure, loved, and motivated in all areas of life.
 
-In conclusion, early childhood education is far more than a stepping stone to school—it is the foundation upon which a lifetime of success is built. By fostering creativity, confidence, social skills, and curiosity, it empowers children to thrive both inside and outside the classroom. Investing in these precious early years means investing in a brighter, more capable future generation.`
+In conclusion, early childhood education is far more than a stepping stone to school—it is the foundation upon which a lifetime of success is built. By fostering creativity, confidence, social skills, and curiosity, it empowers children to thrive both inside and outside the classroom. Investing in these precious early years means investing in a brighter, more capable future generation.`,
     },
     {
       id: 2,
@@ -60,7 +65,7 @@ Music and dance are wonderful tools for energy release and fun. Kids can create 
 
 Finally, simple science experiments can spark curiosity and learning. Mixing baking soda with vinegar to create a mini-volcano or growing beans in a jar of cotton are exciting experiments that teach children about cause and effect while fueling a love for science.
 
-In conclusion, fun activities at home are more than just entertainment—they provide opportunities for children to learn new skills, boost creativity, and strengthen family bonds. With a little imagination, parents can turn everyday moments into joyful learning experiences that their kids will remember for years.`
+In conclusion, fun activities at home are more than just entertainment—they provide opportunities for children to learn new skills, boost creativity, and strengthen family bonds. With a little imagination, parents can turn everyday moments into joyful learning experiences that their kids will remember for years.`,
     },
     {
       id: 3,
@@ -85,7 +90,7 @@ Hydration is another important part of healthy eating. Instead of sugary sodas o
 
 It’s also important to remember that healthy eating is about balance, not perfection. Occasional treats like homemade cookies or ice cream can be enjoyed without guilt, as long as they are balanced with nutritious meals. Teaching moderation helps children develop a healthy relationship with food.
 
-In conclusion, preparing healthy meals for little ones is not just about providing nutrition—it is about building lifelong habits. With simple, fun, and balanced meal ideas, parents can ensure their children grow strong, stay active, and enjoy eating in a way that supports both their body and mind.`
+In conclusion, preparing healthy meals for little ones is not just about providing nutrition—it is about building lifelong habits. With simple, fun, and balanced meal ideas, parents can ensure their children grow strong, stay active, and enjoy eating in a way that supports both their body and mind.`,
     },
     {
       id: 4,
@@ -94,8 +99,7 @@ In conclusion, preparing healthy meals for little ones is not just about providi
       image: kidstory,
       description:
         "Storytelling helps kids develop imagination, language skills, and moral values. Here’s why it’s an essential part of learning.",
-      content:
-        `Storytelling helps kids develop imagination, language skills, and moral values. Here’s why it’s an essential part of learning.
+      content: `Storytelling helps kids develop imagination, language skills, and moral values. Here’s why it’s an essential part of learning.
 
 From ancient times to modern classrooms, storytelling has remained one of the most powerful ways to teach, inspire, and connect with children. Stories do more than entertain—they shape young minds, spark creativity, and introduce children to values and lessons that guide them throughout life.
 
@@ -111,7 +115,7 @@ In the classroom, storytelling can make learning more engaging. Teachers often u
 
 Equally important, storytelling encourages active participation. Children often ask questions, predict what might happen next, or even create their own endings to stories. This builds confidence and helps them become active learners rather than passive listeners.
 
-In conclusion, storytelling is far more than entertainment—it is a vital tool for developing imagination, language, empathy, and moral understanding in children. By weaving creativity with values, storytelling lays a strong foundation for learning and growth. Whether told at home, in school, or during playtime, stories continue to be a magical way to inspire young minds and prepare them for the world ahead.`
+In conclusion, storytelling is far more than entertainment—it is a vital tool for developing imagination, language, empathy, and moral understanding in children. By weaving creativity with values, storytelling lays a strong foundation for learning and growth. Whether told at home, in school, or during playtime, stories continue to be a magical way to inspire young minds and prepare them for the world ahead.`,
     },
     {
       id: 5,
@@ -197,9 +201,13 @@ In conclusion, storytelling is far more than entertainment—it is a vital tool 
             alt={blog.title}
             className="w-full h-120 object-cover rounded-xl shadow-md mb-6"
           />
-          <h1 className="text-3xl font-bold text-purple-800 mb-2">{blog.title}</h1>
+          <h1 className="text-3xl font-bold text-purple-800 mb-2">
+            {blog.title}
+          </h1>
           <span className="text-gray-500 text-sm">{blog.date}</span>
-          <p className="mt-6 text-gray-700 leading-relaxed whitespace-pre-line">{blog.content}</p>
+          <p className="mt-6 text-gray-700 leading-relaxed whitespace-pre-line">
+            {blog.content}
+          </p>
         </div>
       </section>
     );
@@ -227,6 +235,5 @@ In conclusion, storytelling is far more than entertainment—it is a vital tool 
     </section>
   );
 };
-
 
 export default Blog;
