@@ -51,10 +51,10 @@ const AdmissionHeader = () => {
           <p className="text-gray-700">
             If you have any questions, please email{" "}
             <a
-              href="mailto:dreamland@playschool.org"
+              href="mailto:dreamlandkids@gmail.com"
               className="text-purple-600 underline"
             >
-              admissions@parkwestcoop.org
+              dreamlandkids@gmail.com
             </a>
           </p>
           <Link to='/admission-form' className="bg-purple-700 text-white px-6 py-2 rounded-xl shadow-md hover:bg-purple-800 transition">
@@ -92,10 +92,10 @@ const AdmissionHeader = () => {
           <p className="text-gray-700">
             If you have any questions, please email{" "}
             <a
-              href="mailto:dreamland@playschool.org"
+              href="mailto:dreamlandkids@gmail.com"
               className="text-purple-600 underline"
             >
-              admissions@parkwestcoop.org
+              dreamlandkids@gmail.com
             </a>
           </p>
           <Link to='/admission-form' className="bg-purple-700 text-white px-6 py-2 rounded-xl shadow-md hover:bg-purple-800 transition">
