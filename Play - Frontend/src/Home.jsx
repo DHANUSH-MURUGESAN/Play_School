@@ -54,7 +54,7 @@ const Home = () => {
             every child shines bright like a star ✨
           </p>
           <Link
-            to="./admissions"
+            to="/admission"
             className="bg-yellow-400 text-purple-900 font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-xl shadow-md hover:bg-yellow-300 transition-transform hover:scale-105"
           >
             Enroll Now

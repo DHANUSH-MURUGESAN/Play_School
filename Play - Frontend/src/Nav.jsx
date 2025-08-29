@@ -72,7 +72,7 @@ const Nav = () => {
             About Us
           </Link>
           <Link
-            to="/admissions"
+            to="/admission"
             className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Admissions
@@ -90,7 +90,7 @@ const Nav = () => {
             Blog
           </Link>
           <Link
-            to="/contact"
+            to="/contact-form"
             className="hover:text-[#FFD600] transition duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Contact
@@ -115,7 +115,7 @@ const Nav = () => {
               About Us
             </Link>
             <Link
-              to="/admissions"
+              to="/admission"
               className="relative hover:text-[#FFD600] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#FFD600] after:transition-all after:duration-300 hover:after:w-full"
               onClick={() => setIsOpen(false)}
             >

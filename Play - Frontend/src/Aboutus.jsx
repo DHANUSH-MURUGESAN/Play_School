@@ -6,13 +6,11 @@ import children from "./assets/children.jpg";
 import circle from "./assets/circle.png";
 import boy from "./assets/boy.jpg";
 import triangle from "./assets/triangle.png";
+import background1 from "./assets/aboutusimg1.webp";
+import background2 from "./assets/aboutusimg2.jpeg";
 
 const About = () => {
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // or "auto" if you don't want animation
-    });
     AOS.init({
       duration: 1200,
       once: true,
@@ -23,71 +21,136 @@ const About = () => {
   return (
     <>
       {/* About Section */}
-      <section className="bg-gradient-to-br from-purple-100 via-pink-50 to-blue-50 py-16 px-6 lg:px-20">
+      <section className="bg-white py-16 px-6 lg:px-20">
         <div className="max-w-6xl mx-auto">
+          {/* Title */}
           <h2
             data-aos="fade-down"
-            className="text-3xl md:text-4xl font-extrabold text-purple-800 mb-10 text-center"
+            className="text-3xl md:text-4xl font-extrabold text-purple-800 mb-12 text-center"
           >
             About Us
           </h2>
 
-          <div className="mb-12" data-aos="fade-right">
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
-              Dreamland Kids Preschool
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Dreamland Kids Preschool is a leading chain of preschools located
-              in India and Nepal backed by Zee Learn Ltd. With more than two
-              decades of experience in the preschool industry, Dreamland Kids
-              has nurtured more than 1.5 million children throughout India.
-              Being one of the largest preschools in India, Dreamland Kids has
-              2000+ centres in 750+ cities in India and Nepal.
-            </p>
+          {/* Section 1 */}
+          <div
+            className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16"
+            data-aos="fade-right"
+          >
+            {/* Right Text */}
+            <div className="flex-1 text-left">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-800 my-4">
+                About Us – Dreamland Kids Preschool
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                At{" "}
+                <span className="font-semibold">Dreamland Kids Preschool</span>,
+                we believe that the early years of a child’s life are the most
+                important in shaping their personality and future. Every child
+                is unique, and we are dedicated to creating a joyful, nurturing,
+                and stimulating environment where little learners can explore,
+                imagine, and discover the world around them. Our preschool goes
+                beyond academics — it is a place where curiosity is encouraged,
+                creativity is celebrated, and every child’s individuality is
+                respected.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                With a strong focus on holistic development, we ensure that
+                children grow intellectually, emotionally, socially, and
+                physically. Our programs are carefully designed to balance
+                structured learning with play, ensuring that children enjoy
+                every moment of their journey. Whether it’s through fun
+                activities, interactive storytelling, or hands-on experiences,
+                we make learning exciting and meaningful. Our dedicated and
+                caring teachers act as guides and mentors, helping children gain
+                confidence and develop essential life skills.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Over the years, Dreamland Kids has earned the trust of parents
+                by providing a safe, inclusive, and inspiring environment. We
+                pride ourselves on building a strong partnership with families,
+                as we believe that education is a shared journey between parents
+                and teachers. Together, we work to lay a solid foundation that
+                empowers children to dream big, think independently, and embrace
+                the joy of learning.
+              </p>
+
+              {/* Highlights */}
+              <ul className="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>Safe, secure, and child-friendly environment</li>
+                <li>Play-based and experiential learning methodology</li>
+                <li>Dedicated and caring team of educators</li>
+                <li>Focus on creativity, curiosity, and confidence</li>
+                <li>Strong foundation for future academic success</li>
+              </ul>
+            </div>
+            {/* Left Images */}
+            <div className="flex-1 grid grid-cols-1 gap-6">
+              <img
+                src={background1}
+                alt="Dreamland Kids Preschool"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
           </div>
 
-          <div data-aos="fade-left">
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
-              Dreamland Kids Advantage
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Dreamland Kids is a{" "}
-              <span className="font-bold text-purple-700">leader</span> and a
-              trendsetter in{" "}
-              <span className="font-bold text-purple-700">
-                Early Childhood Care and Education (ECCE)
-              </span>
-              . Our business partners’ passion and drive are vital for our
-              brand's success.
-            </p>
+          {/* Section 2 */}
+          <div
+            className="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16 mt-30"
+            data-aos="fade-right"
+          >
+            {/* Left Image */}
+            <div className="flex-1 grid grid-cols-1 gap-6">
+              <img
+                src={background2}
+                alt="Dreamland Kids Preschool"
+                className="rounded-2xl shadow-lg w-full object-cover"
+              />
+            </div>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Our Business Partners don’t just take the name, they also take our{" "}
-              <span className="font-bold text-purple-700">
-                pedagogy– PÉNTEMiND
-              </span>
-              , guidelines to teach, prescribes books/plays to be followed and
-              so on to the ground.
-            </p>
+            {/* Right Text */}
+            <div className="flex-1 text-left">
+              <h3 className="text-2xl md:text-3xl font-extrabold text-gray-800 my-4">
+                Dreamland Kids Advantages
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Choosing the right preschool is one of the most important
+                decisions for your child’s early years, and at{" "}
+                <span className="font-semibold">Dreamland Kids Play World</span>
+                , we provide advantages that set us apart. Our preschool is
+                designed not only as a place of learning, but also as a second
+                home where children feel safe, loved, and motivated to explore
+                their full potential.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                With carefully crafted programs and a child-first approach, we
+                ensure every child receives individual attention and
+                encouragement. Our play-based and experiential learning methods
+                allow children to enjoy education while developing critical
+                thinking, problem-solving, and creativity. In addition, we focus
+                on values such as kindness, respect, and teamwork to help
+                children grow into compassionate and confident individuals.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The Dreamland advantage lies in our holistic development
+                approach — we balance academics, creativity, physical activity,
+                and emotional well-being. Parents choose us for our safe and
+                hygienic facilities, modern classrooms, and a team of passionate
+                teachers who treat every child with patience, care, and
+                understanding. We believe education is not just about preparing
+                children for school, but preparing them for life.
+              </p>
 
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Starting a preschool requires strategic researching, planning,
-              designing, and organising.{" "}
-              <span className="font-bold text-purple-700">
-                Dreamland Kids Professional research
-              </span>
-              , makes this journey easier and rewarding for all our Business
-              Partners.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-              <span className="font-bold text-purple-700">
-                Secret to Success is Service and Support.
-              </span>{" "}
-              We provide pre–opening and operational support apart from the
-              regular support that is given additional to all systems and
-              process.
-            </p>
+              {/* Highlights */}
+              <ul className="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+                <li>Personalized attention for every child</li>
+                <li>Play-based and activity-driven curriculum</li>
+                <li>Safe, hygienic, and child-friendly infrastructure</li>
+                <li>Qualified teachers with a nurturing approach</li>
+                <li>
+                  Balanced focus on academics, creativity, and life skills
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
