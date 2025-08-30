@@ -266,7 +266,7 @@ const Home = () => {
             className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             <img
               src={annualsportsday}
@@ -290,7 +290,7 @@ const Home = () => {
             className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             <img
               src={diwali}
@@ -314,7 +314,7 @@ const Home = () => {
             className="bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 p-6 flex flex-col items-start"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             <img
               src={childrenssday}

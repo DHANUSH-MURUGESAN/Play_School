@@ -35,10 +35,9 @@ const AdmissionHeader = () => {
       <div className="max-w-6xl mx-auto px-6 py-12 space-y-10">
         {/* Section Navigation Headings in Flex */}
         <div className="flex flex-wrap gap-6 justify-center text-lg font-semibold text-purple-700">
-          <p>Admissions</p>
-          <p>How it Works</p>
-          <p>Visit</p>
-          <p>Applications & Deadlines</p>
+          <Link to="/admission/how-it-works">How it Works</Link>
+          <Link to="/admission/visit">Visit</Link>
+          <Link to="/admission/application-and-deadline">Applications & Deadlines</Link>
         </div>
 
         {/* Applications & Deadlines */}

@@ -78,12 +78,6 @@ const Nav = () => {
             Admissions
           </Link>
           <Link
-            to="/shop"
-            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
-          >
-            Shop
-          </Link>
-          <Link
             to="/blog"
             className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
@@ -94,6 +88,12 @@ const Nav = () => {
             className="hover:text-[#FFD600] transition duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
           >
             Contact
+          </Link>
+          <Link
+            to="/shop"
+            className="hover:text-[#FFD600] transition-transform duration-300 hover:drop-shadow-[0_0_8px_#FFD600]"
+          >
+            Shop
           </Link>
         </nav>
 
