@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import butterfly from "./assets/butterfly.gif"; // 🦋 butterfly gif
 
 const AdmissionForm = () => {
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
+      });
+    }, []);
   const [formData, setFormData] = useState({
     childName: "",
     dob: "",

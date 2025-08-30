@@ -4,6 +4,12 @@ import "aos/dist/aos.css";
 import axios from "axios";
 
 const ContactForm = () => {
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
+      });
+  }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

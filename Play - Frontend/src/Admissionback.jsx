@@ -5,12 +5,18 @@ import Aos from "aos"
 import { useEffect } from "react";
 
 const AdmissionHeader = () => {
-    useEffect(() => {
-      Aos.init({
-        duration: 1000, // animation duration in ms
-        once: true, // whether animation should happen only once
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
       });
     }, []);
+  useEffect(() => {
+    Aos.init({
+        duration: 1000, // animation duration in ms
+        once: true, // whether animation should happen only once
+    });
+  }, []);
   return (
     <>
       {/* Hero Section */}

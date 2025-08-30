@@ -11,6 +11,12 @@ import axios from "axios";
 
 const Shop = () => {
   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
+      });
+  }, []);
+  useEffect(() => {
     axios
       .get("http://localhost:8000/api/cart")
       .then((res) => setCart(res.data))

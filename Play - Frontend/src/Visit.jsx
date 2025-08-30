@@ -5,6 +5,12 @@ import { Link } from "react-router";
 
 const Visit = () => {
   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
+      });
+  }, []);
+  useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
 

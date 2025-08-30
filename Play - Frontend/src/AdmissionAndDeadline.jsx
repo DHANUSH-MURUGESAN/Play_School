@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router";
 
 const AdmissionAndDeadline = () => {
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // or "auto" if you don't want animation
+      });
+  }, []);
   return (
     <div className="space-y-6 justify-center max-w-4xl mx-auto py-12 px-6">
       <h2 className="text-3xl font-bold text-gray-900">Applications & Deadlines</h2>
